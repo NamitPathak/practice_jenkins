@@ -9,11 +9,11 @@ pipeline{
         stage('stage-1'){
             steps{
                 echo "This is build number $BUILD_NUMBER of demo $DEMO"
-                sh '''
+                sh """
                 echo "using a multiline shell step"
                 chmod +x test.sh
                 ./test.sh
-                '''
+                """
             }
         }
     }
